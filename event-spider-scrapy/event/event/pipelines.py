@@ -37,7 +37,8 @@ class EventSolrWriter(object):
 		self.client.add([{
 			'id':item['url'],
             'name_s':item['name'],
-            'url_s':item['url']
+            'url_s':item['url'],
+            'zone_s':item['zone']
 			}])
 
 

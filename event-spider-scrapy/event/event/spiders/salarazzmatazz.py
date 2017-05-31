@@ -32,7 +32,7 @@ class SalarazzmatazzSpider(scrapy.Spider):
             item['name'] = "".join(event.css('td.sala a::text').extract()).encode('utf-8')
             item['url'] = self.start_urls[0] + "".join(event.css('td.sala a::attr(href)').extract()).encode('utf-8')
             item['imgList'] = self.start_urls[0] + "".join(event.css('td.inicial img::attr(src)').extract()).encode('utf-8')
-            item['zone'] = "".join(event.css('td.sala span:first-child ::text').extract()).encode('utf-8')
+            #item['zone'] = "".join(event.css('td.sala span:first-child ::text').extract()).encode('utf-8')
             item['dateStart'] = "".join(event.css('span.fecha ::text').extract()).encode("utf-8")
             items.append(item)
         return items

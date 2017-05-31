@@ -1,0 +1,21 @@
+
+ext {
+	virtualEnv='scrapy'
+}
+
+task setupVirtualEnv(type:Exec) {
+
+	//Create Directory
+//	def virtualDir = file("$buildDir/python")
+//	virtualDir.mkdirs()
+//	workingDir = virtualDir.absolutePath
+//	commandLine = 'virtualenv'
+//	args = [ 'scrapy' ]
+	
+	//Install Scrapy
+	workingDir file('$buildDir/python/scrapy/bin')
+	commandLine = 'pip'
+	args = [ 'install', 'scrapy']
+	
+}
+

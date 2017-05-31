@@ -1,2 +1,5 @@
 event-docker/jenkins/home
 event-docker/solr/cores/eventCore/data
+event-spider-scrapy/.gradle
+event-spider-scrapy/.settings
+event-spider-scrapy/build

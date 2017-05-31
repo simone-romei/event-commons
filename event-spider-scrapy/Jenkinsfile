@@ -4,7 +4,7 @@ pipeline {
         stage('install') {
             steps {
             	echo "install scrapy"
-                sh 'pip install scrapy'
+                sh 'pip install scrapy pysolr'
             }
         }
         stage('checkout') {

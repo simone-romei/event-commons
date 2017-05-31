@@ -1,10 +1,16 @@
 pipeline {
     agent any
     stages {
-        stage('setup') {
+        stage('install') {
             steps {
-                sh pip install scrapy
+                sh 'pip install scrapy'
             }
+        }
+        stage('run spider') {
+        	steps {
+        		cd event-spider-scrapy/event
+        		sh 'scrapy crawl salarazzmatazz'
+        	}
         }
     }
 }

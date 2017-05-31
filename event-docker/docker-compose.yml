@@ -1,0 +1,16 @@
+version: '2'
+services:
+  solr:
+    build: solr/.
+    ports:
+      - "8983:8983"
+    volumes:
+      - ./solr/cores:/opt/solr/server/solr/mycores
+  jenkins:
+    build: jenkins/.
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - ./jenkins/home:/var/jenkins_home
+

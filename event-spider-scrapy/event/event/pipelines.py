@@ -35,9 +35,9 @@ class EventSolrWriter(object):
 
 	def process_item(self, item, spider):
 		self.client.add([{
-			'id':item['url']
-
+			'id':item['url'],
+            'name_s':item['name'],
+            'url_s':item['url']
 			}])
-
 
 

@@ -3,13 +3,19 @@ pipeline {
     stages {
         stage('install') {
             steps {
+            	echo "install scrapy"
                 sh 'pip install scrapy'
+            }
+        }
+        stage('checkout') {
+            steps {
+            	echo "checkout scm"
+                checkout scm
             }
         }
         stage('run spider') {
         	steps {
-        		dir event-spider-scrapy/event
-        		sh 'scrapy crawl salarazzmatazz'
+        		echo "run spider"
         	}
         }
     }

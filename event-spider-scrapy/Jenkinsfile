@@ -19,6 +19,7 @@ pipeline {
         		dir('event-spider-scrapy/event') {
         			sh 'pwd'
         		}
+        	}
         }
     }
 }

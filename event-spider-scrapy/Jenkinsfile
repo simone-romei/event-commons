@@ -18,6 +18,7 @@ pipeline {
         		sh 'pwd'
         		dir('event-spider-scrapy/event') {
         			sh 'pwd'
+        			sh 'ls -l'
         		}
         	}
         }

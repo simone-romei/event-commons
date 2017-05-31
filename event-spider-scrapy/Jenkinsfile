@@ -15,8 +15,10 @@ pipeline {
         }
         stage('run spider') {
         	steps {
-        		echo "run spider"
-        	}
+        		sh 'pwd'
+        		dir('event-spider-scrapy/event') {
+        			sh 'pwd'
+        		}
         }
     }
 }

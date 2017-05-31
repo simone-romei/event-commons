@@ -16,3 +16,6 @@ node {
    sh "${mvnHome}/bin/mvn clean install"
 }
 
+node {
+    sh 'echo hello world'
+}

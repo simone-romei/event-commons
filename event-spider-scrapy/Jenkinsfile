@@ -8,7 +8,7 @@ pipeline {
         }
         stage('run spider') {
         	steps {
-        		cd event-spider-scrapy/event
+        		dir event-spider-scrapy/event
         		sh 'scrapy crawl salarazzmatazz'
         	}
         }

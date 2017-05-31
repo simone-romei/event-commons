@@ -15,10 +15,8 @@ pipeline {
         }
         stage('run spider') {
         	steps {
-        		sh 'pwd'
         		dir('event-spider-scrapy/event') {
-        			sh 'pwd'
-        			sh 'ls -l'
+        			sh 'scrapy crawl salarazzmatazz'
         		}
         	}
         }
